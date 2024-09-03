@@ -1,0 +1,785 @@
+{
+    "tracks": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+              },
+              "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+              "id": "2FXC3k01G6Gw61bmprjgqS",
+              "name": "Hozier",
+              "type": "artist",
+              "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3P4SQqMMgjqfqVxgLwtYRk"
+          },
+          "href": "https://api.spotify.com/v1/albums/3P4SQqMMgjqfqVxgLwtYRk",
+          "id": "3P4SQqMMgjqfqVxgLwtYRk",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2733e1b212546dac35443735241",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e023e1b212546dac35443735241",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048513e1b212546dac35443735241",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Unreal Unearth: Unheard",
+          "release_date": "2024-03-22",
+          "release_date_precision": "day",
+          "total_tracks": 20,
+          "type": "album",
+          "uri": "spotify:album:3P4SQqMMgjqfqVxgLwtYRk"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 251424,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ2300335"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Z0UnEtpLDQyYlWwgi8m9C"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5Z0UnEtpLDQyYlWwgi8m9C",
+        "id": "5Z0UnEtpLDQyYlWwgi8m9C",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Too Sweet",
+        "popularity": 88,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:5Z0UnEtpLDQyYlWwgi8m9C"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+              },
+              "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+              "id": "2FXC3k01G6Gw61bmprjgqS",
+              "name": "Hozier",
+              "type": "artist",
+              "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0Uv83rRhY5QvHKkQoULRKk"
+          },
+          "href": "https://api.spotify.com/v1/albums/0Uv83rRhY5QvHKkQoULRKk",
+          "id": "0Uv83rRhY5QvHKkQoULRKk",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2737a9bf5f82e32d33d4503fe7b",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e027a9bf5f82e32d33d4503fe7b",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048517a9bf5f82e32d33d4503fe7b",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Hozier",
+          "release_date": "2014-09-19",
+          "release_date_precision": "day",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:0Uv83rRhY5QvHKkQoULRKk"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 241688,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ1300031"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3dYD57lRAUcMHufyqn9GcI"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3dYD57lRAUcMHufyqn9GcI",
+        "id": "3dYD57lRAUcMHufyqn9GcI",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Take Me To Church",
+        "popularity": 83,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:3dYD57lRAUcMHufyqn9GcI"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+              },
+              "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+              "id": "2FXC3k01G6Gw61bmprjgqS",
+              "name": "Hozier",
+              "type": "artist",
+              "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0Uv83rRhY5QvHKkQoULRKk"
+          },
+          "href": "https://api.spotify.com/v1/albums/0Uv83rRhY5QvHKkQoULRKk",
+          "id": "0Uv83rRhY5QvHKkQoULRKk",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2737a9bf5f82e32d33d4503fe7b",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e027a9bf5f82e32d33d4503fe7b",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048517a9bf5f82e32d33d4503fe7b",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Hozier",
+          "release_date": "2014-09-19",
+          "release_date_precision": "day",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:0Uv83rRhY5QvHKkQoULRKk"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 229715,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ1400146"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/35PKfoynRpVFoAUE3D5Kc6"
+        },
+        "href": "https://api.spotify.com/v1/tracks/35PKfoynRpVFoAUE3D5Kc6",
+        "id": "35PKfoynRpVFoAUE3D5Kc6",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Work Song",
+        "popularity": 73,
+        "preview_url": null,
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:35PKfoynRpVFoAUE3D5Kc6"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2RQXRUsr4IW1f3mKyKsy4B"
+              },
+              "href": "https://api.spotify.com/v1/artists/2RQXRUsr4IW1f3mKyKsy4B",
+              "id": "2RQXRUsr4IW1f3mKyKsy4B",
+              "name": "Noah Kahan",
+              "type": "artist",
+              "uri": "spotify:artist:2RQXRUsr4IW1f3mKyKsy4B"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3qBWNcWifNhUKJAWzswdJY"
+          },
+          "href": "https://api.spotify.com/v1/albums/3qBWNcWifNhUKJAWzswdJY",
+          "id": "3qBWNcWifNhUKJAWzswdJY",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b273ba6fb0a7e6c53fb8faa96226",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e02ba6fb0a7e6c53fb8faa96226",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851ba6fb0a7e6c53fb8faa96226",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Stick Season (Forever)",
+          "release_date": "2024-02-09",
+          "release_date_precision": "day",
+          "total_tracks": 30,
+          "type": "album",
+          "uri": "spotify:album:3qBWNcWifNhUKJAWzswdJY"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2RQXRUsr4IW1f3mKyKsy4B"
+            },
+            "href": "https://api.spotify.com/v1/artists/2RQXRUsr4IW1f3mKyKsy4B",
+            "id": "2RQXRUsr4IW1f3mKyKsy4B",
+            "name": "Noah Kahan",
+            "type": "artist",
+            "uri": "spotify:artist:2RQXRUsr4IW1f3mKyKsy4B"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 267256,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM72315552"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6pBeLF2GZS3NNwV4DBvtg5"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6pBeLF2GZS3NNwV4DBvtg5",
+        "id": "6pBeLF2GZS3NNwV4DBvtg5",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Northern Attitude (with Hozier)",
+        "popularity": 64,
+        "preview_url": null,
+        "track_number": 26,
+        "type": "track",
+        "uri": "spotify:track:6pBeLF2GZS3NNwV4DBvtg5"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+              },
+              "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+              "id": "2FXC3k01G6Gw61bmprjgqS",
+              "name": "Hozier",
+              "type": "artist",
+              "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5j1ZsFyNCsnt62prbs85eE"
+          },
+          "href": "https://api.spotify.com/v1/albums/5j1ZsFyNCsnt62prbs85eE",
+          "id": "5j1ZsFyNCsnt62prbs85eE",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b273299e8e9983e2b0455e5e8505",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e02299e8e9983e2b0455e5e8505",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851299e8e9983e2b0455e5e8505",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Wasteland, Baby!",
+          "release_date": "2019-03-01",
+          "release_date_precision": "day",
+          "total_tracks": 14,
+          "type": "album",
+          "uri": "spotify:album:5j1ZsFyNCsnt62prbs85eE"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 268293,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ1800137"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0L3oQdYUvVbsOOPJSkZ3C3"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0L3oQdYUvVbsOOPJSkZ3C3",
+        "id": "0L3oQdYUvVbsOOPJSkZ3C3",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Would That I",
+        "popularity": 69,
+        "preview_url": null,
+        "track_number": 12,
+        "type": "track",
+        "uri": "spotify:track:0L3oQdYUvVbsOOPJSkZ3C3"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+              },
+              "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+              "id": "2FXC3k01G6Gw61bmprjgqS",
+              "name": "Hozier",
+              "type": "artist",
+              "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/48qd9sU3xqYJbKaxHCciJL"
+          },
+          "href": "https://api.spotify.com/v1/albums/48qd9sU3xqYJbKaxHCciJL",
+          "id": "48qd9sU3xqYJbKaxHCciJL",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b273b07bd43d1bec442c7fcc4d1e",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e02b07bd43d1bec442c7fcc4d1e",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851b07bd43d1bec442c7fcc4d1e",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Unreal Unearth: Unaired",
+          "release_date": "2024-08-19",
+          "release_date_precision": "day",
+          "total_tracks": 23,
+          "type": "album",
+          "uri": "spotify:album:48qd9sU3xqYJbKaxHCciJL"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 237213,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ2400052"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0u5F4oIPIGPrNL8A0Creez"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0u5F4oIPIGPrNL8A0Creez",
+        "id": "0u5F4oIPIGPrNL8A0Creez",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Nobody's Soldier",
+        "popularity": 63,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:0u5F4oIPIGPrNL8A0Creez"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+              },
+              "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+              "id": "2FXC3k01G6Gw61bmprjgqS",
+              "name": "Hozier",
+              "type": "artist",
+              "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0Uv83rRhY5QvHKkQoULRKk"
+          },
+          "href": "https://api.spotify.com/v1/albums/0Uv83rRhY5QvHKkQoULRKk",
+          "id": "0Uv83rRhY5QvHKkQoULRKk",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2737a9bf5f82e32d33d4503fe7b",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e027a9bf5f82e32d33d4503fe7b",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048517a9bf5f82e32d33d4503fe7b",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Hozier",
+          "release_date": "2014-09-19",
+          "release_date_precision": "day",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:0Uv83rRhY5QvHKkQoULRKk"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 222813,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ1400143"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/22sS7JkzeVeq4vOPCB6Fbj"
+        },
+        "href": "https://api.spotify.com/v1/tracks/22sS7JkzeVeq4vOPCB6Fbj",
+        "id": "22sS7JkzeVeq4vOPCB6Fbj",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Someone New",
+        "popularity": 71,
+        "preview_url": null,
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:22sS7JkzeVeq4vOPCB6Fbj"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+              },
+              "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+              "id": "2FXC3k01G6Gw61bmprjgqS",
+              "name": "Hozier",
+              "type": "artist",
+              "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5j1ZsFyNCsnt62prbs85eE"
+          },
+          "href": "https://api.spotify.com/v1/albums/5j1ZsFyNCsnt62prbs85eE",
+          "id": "5j1ZsFyNCsnt62prbs85eE",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b273299e8e9983e2b0455e5e8505",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e02299e8e9983e2b0455e5e8505",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851299e8e9983e2b0455e5e8505",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Wasteland, Baby!",
+          "release_date": "2019-03-01",
+          "release_date_precision": "day",
+          "total_tracks": 14,
+          "type": "album",
+          "uri": "spotify:album:5j1ZsFyNCsnt62prbs85eE"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 217480,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ1800127"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7uttm8Iurm5uK67Vr9G2Sp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7uttm8Iurm5uK67Vr9G2Sp",
+        "id": "7uttm8Iurm5uK67Vr9G2Sp",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Almost (Sweet Music)",
+        "popularity": 70,
+        "preview_url": null,
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:7uttm8Iurm5uK67Vr9G2Sp"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+              },
+              "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+              "id": "2FXC3k01G6Gw61bmprjgqS",
+              "name": "Hozier",
+              "type": "artist",
+              "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0TFpENEamBfIfGISdSTXFB"
+          },
+          "href": "https://api.spotify.com/v1/albums/0TFpENEamBfIfGISdSTXFB",
+          "id": "0TFpENEamBfIfGISdSTXFB",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2734a60a2e02534ecabc839dbe9",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e024a60a2e02534ecabc839dbe9",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048514a60a2e02534ecabc839dbe9",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Unreal Unearth",
+          "release_date": "2023-08-18",
+          "release_date_precision": "day",
+          "total_tracks": 16,
+          "type": "album",
+          "uri": "spotify:album:0TFpENEamBfIfGISdSTXFB"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 243946,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ2300020"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3hbKcj640iYmPQgecainOr"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3hbKcj640iYmPQgecainOr",
+        "id": "3hbKcj640iYmPQgecainOr",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Eat Your Young",
+        "popularity": 67,
+        "preview_url": null,
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:3hbKcj640iYmPQgecainOr"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+              },
+              "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+              "id": "2FXC3k01G6Gw61bmprjgqS",
+              "name": "Hozier",
+              "type": "artist",
+              "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0Uv83rRhY5QvHKkQoULRKk"
+          },
+          "href": "https://api.spotify.com/v1/albums/0Uv83rRhY5QvHKkQoULRKk",
+          "id": "0Uv83rRhY5QvHKkQoULRKk",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2737a9bf5f82e32d33d4503fe7b",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e027a9bf5f82e32d33d4503fe7b",
+              "width": 300,
+              "height": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048517a9bf5f82e32d33d4503fe7b",
+              "width": 64,
+              "height": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Hozier",
+          "release_date": "2014-09-19",
+          "release_date_precision": "day",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:0Uv83rRhY5QvHKkQoULRKk"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+            "id": "2FXC3k01G6Gw61bmprjgqS",
+            "name": "Hozier",
+            "type": "artist",
+            "uri": "spotify:artist:2FXC3k01G6Gw61bmprjgqS"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 198029,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ1400147"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4LGJ2pLDvTRnul3EcZoYkX"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4LGJ2pLDvTRnul3EcZoYkX",
+        "id": "4LGJ2pLDvTRnul3EcZoYkX",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Like Real People Do",
+        "popularity": 67,
+        "preview_url": null,
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:4LGJ2pLDvTRnul3EcZoYkX"
+      }
+    ]
+  }
+  

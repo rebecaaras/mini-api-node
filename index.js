@@ -1,13 +1,17 @@
 //imports
 const express = require('express');
-
+const fs = require('fs');
 const app = express();
 app.use(express.json());
-
 const Joi = require('joi');
+
 const schema = { //schema for validation
     name: Joi.string().min(3).required()
 };
+
+//data import
+const artistData = JSON.parse(fs.readFileSync('data/artist.json', 'utf-8'))
+const albumsData = JSON.parse(fs.readFileSync('data/albums.json', 'utf-8'))
 
 const courses = [
     {id: 1, name: 'course1'},
@@ -15,12 +19,18 @@ const courses = [
     {id: 3, name: 'course3'},
 ];
 
-app.get('/', (req, res) => {
-    res.send('Hi, everybody!')
+//GET METHODS
+app.get('/api/artist/hozier', (req, res) => {
+    hozierData = {name: artistData.name, 
+        followers: artistData.followers.total,
+        genres: artistData.genres,
+        image: artistData.images[0].url}
+
+    res.send(hozierData);
 });
 
-app.get('/api/courses', (req, res) => {
-    res.send(courses)
+app.get('/api/artist/hozier/albums', (req, res) => {
+    res.send(albumsData);
 });
 
 app.get('/api/courses/:id', (req, res) => {

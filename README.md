@@ -35,7 +35,17 @@ The REST API to the example app is described below.
 
 `GET /thing/`
 
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
+    curl -X GET http://localhost:5000/api/courses/
+
+`PUT /thing/`
+
+    curl -X PUT http://localhost:5000/api/courses/1 -H "Content-Type: application/json" -d '{"name": "hi-everybody-i-am-sophie"}'
+
+`POST /thing/`  
+    
+    curl -X POST http://localhost:5000/api/courses/ -H "Content-Type: application/json" -d '{"name": "hi-everybody-brand-new"}'
+
+
 
 ### Response
 
