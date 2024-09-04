@@ -89,31 +89,16 @@ app.get('/api/artist/hozier/my-favourite-tracks', (req, res) => {
     res.send(myFavouriteTracks)
 });
 
-// app.delete('/api/artist/hozier/my-favourite-tracks/:id', (req, res) => {
-//     let trackToDelete = myFavouriteTracks.find(track => track.id === req.params.id)//.find(a => a === parseInt(req.params.id));
-//     if (!trackToDelete){
-//         res.status(404).send('The track with the given id was not found.');
-//     } else {
-//         myFavouriteTracks.splice(req.body.id, req.body.id)
-//         res.send(trackToDelete);
-//     }
-// });
-
-// app.put('/api/courses/:id', (req, res) => {
-//     const course = courses.find(c => c.id === parseInt(req.params.id));
-//     if (!course){
-//         res.status(404).send('The course with the given id was not found.');
-//     }
-    
-//     const result = Joi.validate(req.body, schema);
-//     if (result.error){
-//          res.status(400).send(result.error.details[0].message)
-//          return
-//     } else {
-//         course.name = req.body.name;
-//         res.send(course);
-//     };
-// })
+app.delete('/api/artist/hozier/my-favourite-tracks/:id', (req, res) => {
+    const trackToDelete = myFavouriteTracks.find(t => t.id === parseInt(req.params.id))
+    if (!trackToDelete){
+        res.status(404).send('The track with the given id was not found.');
+    } else {
+        const index = myFavouriteTracks.indexOf(trackToDelete)
+        myFavouriteTracks.splice(index, 1)
+        res.send(trackToDelete);
+    }
+});
 
 const port = process.env.PORT || 3000;
 
