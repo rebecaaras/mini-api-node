@@ -5,13 +5,14 @@ const app = express();
 app.use(express.json());
 const Joi = require('joi');
 
-const schema = { //schema for validation
+const schema = Joi.object({ //schema for validation
     name: Joi.string().min(3).required()
-};
+});
 
 //data import
 const artistData = JSON.parse(fs.readFileSync('data/artist.json', 'utf-8'))
 const albumsData = JSON.parse(fs.readFileSync('data/albums.json', 'utf-8'))
+const topTracksData = JSON.parse(fs.readFileSync('data/top-tracks.json', 'utf-8'))
 
 const courses = [
     {id: 1, name: 'course1'},
@@ -53,37 +54,51 @@ app.get('/api/artist/hozier/albums/:id', (req, res) => {
     
 });
 
-app.post('/api/courses', (req, res) => {
-    const result = Joi.validate(req.body, schema);
+let topTracks = [] //topTracksData//[]
+for (i = 0; i < topTracksData.tracks.length; i++){
+    topTracks[i] = {name: topTracksData.tracks[i].name,
+        album: topTracksData.tracks[i].album.name,
+        release_date: topTracksData.tracks[i].album.release_date,
+        popularity: topTracksData.tracks[i].popularity,     
+        }
+ }
+
+ app.get('/api/artist/hozier/top-tracks', (req, res) => {
+    res.send(topTracks)
+});
+
+myFavouriteTracks = [];
+app.post('/api/artist/hozier/my-favourite-tracks', (req, res) => {
+    const result = schema.validate(req.body);
     if (result.error){
          res.status(400).send(result.error.details[0].message)
          return
      } else {
-         const course = {
-         id: courses.length + 1,
+         const track = {
+         id: myFavouriteTracks.length + 1,
          name: req.body.name,
          };
 
-         courses.push(course);
-         res.send(course);
+         myFavouriteTracks.push(track);
+         res.send(track);
      };
 })
 
-app.put('/api/courses/:id', (req, res) => {
-    const course = courses.find(c => c.id === parseInt(req.params.id));
-    if (!course){
-        res.status(404).send('The course with the given id was not found.');
-    }
-    
-    const result = Joi.validate(req.body, schema);
-    if (result.error){
-         res.status(400).send(result.error.details[0].message)
-         return
+//GET favourite tracks
+app.get('/api/artist/hozier/my-favourite-tracks', (req, res) => {
+    res.send(myFavouriteTracks)
+});
+
+app.delete('/api/artist/hozier/my-favourite-tracks/:id', (req, res) => {
+    const trackToDelete = myFavouriteTracks.find(t => t.id === parseInt(req.params.id))
+    if (!trackToDelete){
+        res.status(404).send('The track with the given id was not found.');
     } else {
-        course.name = req.body.name;
-        res.send(course);
-    };
-})
+        const index = myFavouriteTracks.indexOf(trackToDelete)
+        myFavouriteTracks.splice(index, 1)
+        res.send(trackToDelete);
+    }
+});
 
 const port = process.env.PORT || 3000;
 
