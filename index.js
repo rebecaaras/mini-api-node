@@ -5,9 +5,9 @@ const app = express();
 app.use(express.json());
 const Joi = require('joi');
 
-const schema = { //schema for validation
+const schema = Joi.object({ //schema for validation
     name: Joi.string().min(3).required()
-};
+});
 
 //data import
 const artistData = JSON.parse(fs.readFileSync('data/artist.json', 'utf-8'))
@@ -62,41 +62,58 @@ for (i = 0; i < topTracksData.tracks.length; i++){
         popularity: topTracksData.tracks[i].popularity,     
         }
  }
+
  app.get('/api/artist/hozier/top-tracks', (req, res) => {
     res.send(topTracks)
 });
 
-app.post('/api/courses', (req, res) => {
-    const result = Joi.validate(req.body, schema);
+myFavouriteTracks = [];
+app.post('/api/artist/hozier/my-favourite-tracks', (req, res) => {
+    const result = schema.validate(req.body);
     if (result.error){
          res.status(400).send(result.error.details[0].message)
          return
      } else {
-         const course = {
-         id: courses.length + 1,
+         const track = {
+         id: myFavouriteTracks.length + 1,
          name: req.body.name,
          };
 
-         courses.push(course);
-         res.send(course);
+         myFavouriteTracks.push(track);
+         res.send(track);
      };
 })
 
-app.put('/api/courses/:id', (req, res) => {
-    const course = courses.find(c => c.id === parseInt(req.params.id));
-    if (!course){
-        res.status(404).send('The course with the given id was not found.');
-    }
+//GET favourite tracks
+app.get('/api/artist/hozier/my-favourite-tracks', (req, res) => {
+    res.send(myFavouriteTracks)
+});
+
+// app.delete('/api/artist/hozier/my-favourite-tracks/:id', (req, res) => {
+//     let trackToDelete = myFavouriteTracks.find(track => track.id === req.params.id)//.find(a => a === parseInt(req.params.id));
+//     if (!trackToDelete){
+//         res.status(404).send('The track with the given id was not found.');
+//     } else {
+//         myFavouriteTracks.splice(req.body.id, req.body.id)
+//         res.send(trackToDelete);
+//     }
+// });
+
+// app.put('/api/courses/:id', (req, res) => {
+//     const course = courses.find(c => c.id === parseInt(req.params.id));
+//     if (!course){
+//         res.status(404).send('The course with the given id was not found.');
+//     }
     
-    const result = Joi.validate(req.body, schema);
-    if (result.error){
-         res.status(400).send(result.error.details[0].message)
-         return
-    } else {
-        course.name = req.body.name;
-        res.send(course);
-    };
-})
+//     const result = Joi.validate(req.body, schema);
+//     if (result.error){
+//          res.status(400).send(result.error.details[0].message)
+//          return
+//     } else {
+//         course.name = req.body.name;
+//         res.send(course);
+//     };
+// })
 
 const port = process.env.PORT || 3000;
 
