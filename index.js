@@ -29,8 +29,18 @@ app.get('/api/artist/hozier', (req, res) => {
     res.send(hozierData);
 });
 
+//Fazer dicionário com albums e informações do album
 app.get('/api/artist/hozier/albums', (req, res) => {
-    res.send(albumsData);
+     let hozierAlbumsData = {}
+     i = 10
+     //for (i = 0; albumsData.items.length; i++){
+        hozierAlbumsData[i] = {name: albumsData.items[i].name, 
+            cover: albumsData.items[i].images[0].url,
+            release_date: albumsData.items[i].release_date,
+            total_tracks: albumsData.items[i].total_tracks};
+     //}
+
+    res.send(hozierAlbumsData)
 });
 
 app.get('/api/courses/:id', (req, res) => {
