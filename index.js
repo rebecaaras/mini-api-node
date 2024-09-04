@@ -12,6 +12,7 @@ const schema = { //schema for validation
 //data import
 const artistData = JSON.parse(fs.readFileSync('data/artist.json', 'utf-8'))
 const albumsData = JSON.parse(fs.readFileSync('data/albums.json', 'utf-8'))
+const topTracksData = JSON.parse(fs.readFileSync('data/top-tracks.json', 'utf-8'))
 
 const courses = [
     {id: 1, name: 'course1'},
@@ -51,6 +52,18 @@ app.get('/api/artist/hozier/albums/:id', (req, res) => {
         res.send(album);
     }
     
+});
+
+let topTracks = [] //topTracksData//[]
+for (i = 0; i < topTracksData.tracks.length; i++){
+    topTracks[i] = {name: topTracksData.tracks[i].name,
+        album: topTracksData.tracks[i].album.name,
+        release_date: topTracksData.tracks[i].album.release_date,
+        popularity: topTracksData.tracks[i].popularity,     
+        }
+ }
+ app.get('/api/artist/hozier/top-tracks', (req, res) => {
+    res.send(topTracks)
 });
 
 app.post('/api/courses', (req, res) => {
