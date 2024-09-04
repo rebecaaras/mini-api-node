@@ -21,35 +21,34 @@ const courses = [
 
 //GET METHODS
 app.get('/api/artist/hozier', (req, res) => {
-    hozierData = {name: artistData.name, 
+    artist = {name: artistData.name, 
         followers: artistData.followers.total,
         genres: artistData.genres,
         image: artistData.images[0].url}
 
-    res.send(hozierData);
+    res.send(artist);
 });
 
 //Fazer dicionário com albums e informações do album
-app.get('/api/artist/hozier/albums', (req, res) => {
-     let hozierAlbumsData = {}
-     i = 10
-     //for (i = 0; albumsData.items.length; i++){
-        hozierAlbumsData[i] = {name: albumsData.items[i].name, 
+let albums = {}
+     for (i = 0; i < albumsData.items.length; i++){
+        albums[parseInt(i + 1)] = {name: albumsData.items[i].name, 
             cover: albumsData.items[i].images[0].url,
             release_date: albumsData.items[i].release_date,
             total_tracks: albumsData.items[i].total_tracks};
-     //}
+     }
 
-    res.send(hozierAlbumsData)
+app.get('/api/artist/hozier/albums', (req, res) => {
+    res.send(albums)
 });
 
-app.get('/api/courses/:id', (req, res) => {
+app.get('/api/artist/hozier/albums/:id', (req, res) => {
     //This code is a bit unclear to me...
-    const course = courses.find(c => c.id === parseInt(req.params.id));
-    if (!course){
-        res.status(404).send('The course with the given id was not found.');
+    let album = albums[req.params.id]//.find(a => a === parseInt(req.params.id));
+    if (!album){
+        res.status(404).send('The album with the given id was not found.');
     } else {
-        res.send(course);
+        res.send(album);
     }
     
 });
