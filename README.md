@@ -1,360 +1,108 @@
-# REST API example application
-
-This is a bare-bones example of a Sinatra application providing a REST
-API to a DataMapper-backed model.
-
-The entire application is contained within the `app.rb` file.
-
-`config.ru` is a minimal Rack configuration for unicorn.
-
-`run-tests.sh` runs a simplistic test and generates the API
-documentation below.
-
-It uses `run-curl-tests.rb` which runs each command defined in
-`commands.yml`.
-
-## Install
-
-    bundle install
-
-## Run the app
-
-    unicorn -p 7000
-
-## Run the tests
-
-    ./run-tests.sh
-
 # REST API
 
-The REST API to the example app is described below.
+This is a REST API for collecting and editing data. In the example I used as example the data of one of my favourite musicians, Hozier.
 
-## Get list of Things
+The API has the endpoints described below.
 
-### Request
+### Requests
+#### Get artist data
 
-`GET /thing/`
+`GET /hozier/`
 
-    curl -X GET http://localhost:5000/api/courses/
+    curl -X GET http://localhost:5000/api/artist/hozier
 
-`PUT /thing/`
+#### Get list of albums
 
-    curl -X PUT http://localhost:5000/api/courses/1 -H "Content-Type: application/json" -d '{"name": "hi-everybody-i-am-sophie"}'
+`GET /albums/`
 
-`POST /thing/`  
-    
-    curl -X POST http://localhost:5000/api/courses/ -H "Content-Type: application/json" -d '{"name": "hi-everybody-brand-new"}'
+    curl -X GET http://localhost:5000/api/artist/hozier/albums/
 
+#### Get album by id
 
+`GET /albums/{album_id}`
 
-### Response
+    curl -X GET http://localhost:5000/api/artist/hozier/albums/{album_id}
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
+#### Get list of top tracks
 
-    []
+`GET /top-tracks/`
 
-## Create a new Thing
+    curl -X GET http://localhost:5000/api/artist/hozier/top-tracks
 
-### Request
+#### List of favourite tracks
 
-`POST /thing/`
+Below you can see how to post, delete and get songs from a list of your favourite ones.
 
-    curl -i -H 'Accept: application/json' -d 'name=Foo&status=new' http://localhost:7000/thing
+#### GET list of favourite tracks
+`GET /my-favourite-tracks/`
 
-### Response
+    curl -X GET http://localhost:5000/api/artist/hozier/my-favourite-tracks
 
-    HTTP/1.1 201 Created
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 201 Created
-    Connection: close
-    Content-Type: application/json
-    Location: /thing/1
-    Content-Length: 36
+#### POST track to list of favourite tracks
+`POST /my-favourite-tracks/`
 
-    {"id":1,"name":"Foo","status":"new"}
+    curl -X POST http://localhost:5000/api/artist/hozier/my-favourite-tracks -H "Content-Type: application/json" -d '{"name": "{track_name}"}'
 
-## Get a specific Thing
-
-### Request
-
-`GET /thing/id`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/1
-
-### Response
+##### Response Example (200 OK)
 
     HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 36
+    X-Powered-By: Express
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 27
+    ETag: W/"1b-YhvplAMvQvlum00dvbBFcyehCE4"
+    Date: Thu, 05 Sep 2024 07:23:44 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5   
+    { [27 bytes data]
+    100    48  100    27  100    21   9919   7714 --:--:-- --:--:-- --:--:-- 24000
+    {"id":2,"name":"Francesca"}}
 
-    {"id":1,"name":"Foo","status":"new"}
+##### Response Example (400 Bad Request)
+    HTTP/1.1 400 Bad Request
+    X-Powered-By: Express
+    Content-Type: text/html; charset=utf-8
+    Content-Length: 48
+    ETag: W/"30-CikzUDPZxqY5oNShsnOxVSdmhgs"
+    Date: Thu, 05 Sep 2024 07:30:01 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
 
-## Get a non-existent Thing
+    [48 bytes data]
+    100    62  100    48  100    14  12108   3531 --:--:-- --:--:-- --:--:-- 20666
+    "name" length must be at least 3 characters long
 
-### Request
+#### DELETE track from list of favourite tracks
+`DELETE /my-favourite-tracks/{track_id}`
 
-`GET /thing/id`
+    $ curl -X DELETE http://localhost:5000/api/artist/hozier/my-favourite-tracks/{track_id}
 
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/9999
+##### Response Example (200 OK)
 
-### Response
+    HTTP/1.1 200 OK
+    X-Powered-By: Express
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 27
+    ETag: W/"1b-KKjXcZUOSG18tSmB5eDACzmB318"
+    Date: Thu, 05 Sep 2024 07:15:38 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
+
+    { [27 bytes data]
+    100    48  100    27  100    21   9708   7551 --:--:-- --:--:-- --:--:-- 24000
+    {"id":1,"name":"From Eden"}}
+
+
+##### Response Example (404 error)
 
     HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 35
-
-    {"status":404,"reason":"Not found"}
-
-## Create another new Thing
-
-### Request
-
-`POST /thing/`
-
-    curl -i -H 'Accept: application/json' -d 'name=Bar&junk=rubbish' http://localhost:7000/thing
-
-### Response
-
-    HTTP/1.1 201 Created
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 201 Created
-    Connection: close
-    Content-Type: application/json
-    Location: /thing/2
-    Content-Length: 35
-
-    {"id":2,"name":"Bar","status":null}
-
-## Get list of Things again
-
-### Request
-
-`GET /thing/`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 74
-
-    [{"id":1,"name":"Foo","status":"new"},{"id":2,"name":"Bar","status":null}]
-
-## Change a Thing's state
-
-### Request
-
-`PUT /thing/:id/status/changed`
-
-    curl -i -H 'Accept: application/json' -X PUT http://localhost:7000/thing/1/status/changed
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 40
-
-    {"id":1,"name":"Foo","status":"changed"}
-
-## Get changed Thing
-
-### Request
-
-`GET /thing/id`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 40
-
-    {"id":1,"name":"Foo","status":"changed"}
-
-## Change a Thing
-
-### Request
-
-`PUT /thing/:id`
-
-    curl -i -H 'Accept: application/json' -X PUT -d 'name=Foo&status=changed2' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 41
-
-    {"id":1,"name":"Foo","status":"changed2"}
-
-## Attempt to change a Thing using partial params
-
-### Request
-
-`PUT /thing/:id`
-
-    curl -i -H 'Accept: application/json' -X PUT -d 'status=changed3' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 41
-
-    {"id":1,"name":"Foo","status":"changed3"}
-
-## Attempt to change a Thing using invalid params
-
-### Request
-
-`PUT /thing/:id`
-
-    curl -i -H 'Accept: application/json' -X PUT -d 'id=99&status=changed4' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 41
-
-    {"id":1,"name":"Foo","status":"changed4"}
-
-## Change a Thing using the _method hack
-
-### Request
-
-`POST /thing/:id?_method=POST`
-
-    curl -i -H 'Accept: application/json' -X POST -d 'name=Baz&_method=PUT' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 41
-
-    {"id":1,"name":"Baz","status":"changed4"}
-
-## Change a Thing using the _method hack in the url
-
-### Request
-
-`POST /thing/:id?_method=POST`
-
-    curl -i -H 'Accept: application/json' -X POST -d 'name=Qux' http://localhost:7000/thing/1?_method=PUT
-
-### Response
-
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: text/html;charset=utf-8
-    Content-Length: 35
-
-    {"status":404,"reason":"Not found"}
-
-## Delete a Thing
-
-### Request
-
-`DELETE /thing/id`
-
-    curl -i -H 'Accept: application/json' -X DELETE http://localhost:7000/thing/1/
-
-### Response
-
-    HTTP/1.1 204 No Content
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 204 No Content
-    Connection: close
-
-
-## Try to delete same Thing again
-
-### Request
-
-`DELETE /thing/id`
-
-    curl -i -H 'Accept: application/json' -X DELETE http://localhost:7000/thing/1/
-
-### Response
-
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 35
-
-    {"status":404,"reason":"Not found"}
-
-## Get deleted Thing
-
-### Request
-
-`GET /thing/1`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:33 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 35
-
-    {"status":404,"reason":"Not found"}
-
-## Delete a Thing using the _method hack
-
-### Request
-
-`DELETE /thing/id`
-
-    curl -i -H 'Accept: application/json' -X POST -d'_method=DELETE' http://localhost:7000/thing/2/
-
-### Response
-
-    HTTP/1.1 204 No Content
-    Date: Thu, 24 Feb 2011 12:36:33 GMT
-    Status: 204 No Content
-    Connection: close
-
-
+    X-Powered-By: Express
+    Content-Type: text/html; charset=utf-8
+    Content-Length: 42
+    ETag: W/"2a-4ILTudmV9gn4+sGUgNHGmV4ws5o"
+    Date: Thu, 05 Sep 2024 07:17:23 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
+
+    { [42 bytes data]
+    100    42  100    42    0     0  15250      0 --:--:-- --:--:-- --:--:-- 21000
+    The track with the given id was not found.}
