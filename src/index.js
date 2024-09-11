@@ -100,5 +100,6 @@ app.delete('/api/artist/hozier/my-favourite-tracks/:id', (req, res) => {
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => 
-    {console.log(`App listening on port ${port}...`)
+    {console.log(`App listening on port ${port}... Go to http://localhost:${port}/api/artist/hozier/`)
+    console.log(`(Press CTRL+C to stop the app.)`)
 });
