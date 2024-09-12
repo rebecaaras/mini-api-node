@@ -1,8 +1,44 @@
+# Installation
+
+### Docker installation
+This application uses **Docker containers**. 
+
+If you don't have Docker installed, please follow:
+- [this tutorial](https://docs.docker.com/desktop/)
+- go to *Install Docker Desktop*
+
+and come back here after installing Docker.
+
+### Api installation
+Using *Git Bash* preferably, follow the steps below:
+
+Clone the git repository:
+
+    git clone https://github.com/rebecaaras/mini-api-node.git
+    cd mini-api-node
+
+Run the Docker image:
+
+    docker-compose up
+
+If everything is ok, you should see the following:
+
+    WARN[0000] /home/rebeca/mini-api-node/docker-compose.yml: `version` is obsolete
+    [+] Running 1/0
+    ✔ Container mini-api-node-mini-api-node-1  Created                 0.0s
+    Attaching to mini-api-node-1
+    mini-api-node-1  |
+    mini-api-node-1  | > mini-api-node@1.0.0 start
+    mini-api-node-1  | > node src/index.js
+    mini-api-node-1  |
+    mini-api-node-1  | App listening on port 5000... Go to http://localhost:5000/api/artist/hozier/
+    mini-api-node-1  | (Press CTRL+C to stop the app.)
+
 # REST API
 
 This is a REST API for collecting and editing data. In the example I used as example the data of one of my favourite musicians, Hozier.
 
-The API has the endpoints described below.
+The API has the endpoints described below. You can run all the GET requests simply going to the link in your browser, but to make POST and DELETE requests [curl](https://curl.se/) or any similar tool will be needed.
 
 ### Requests
 #### Get artist data
@@ -74,7 +110,7 @@ Below you can see how to post, delete and get songs from a list of your favourit
 #### DELETE track from list of favourite tracks
 `DELETE /my-favourite-tracks/{track_id}`
 
-    $ curl -X DELETE http://localhost:5000/api/artist/hozier/my-favourite-tracks/{track_id}
+    curl -X DELETE http://localhost:5000/api/artist/hozier/my-favourite-tracks/{track_id}
 
 ##### Response Example (200 OK)
 
